@@ -12,6 +12,7 @@ export class ClientProxyFlights {
   constructor(private readonly config: ConfigService) {}
 
   clientProxyUsers(): ClientProxy {
+    console.log('test')
     return ClientProxyFactory.create({
       transport: Transport.RMQ,
       options: {
