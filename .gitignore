@@ -4,6 +4,7 @@
 /api-gateway/.env.development
 /api-gateway/node_modules
 /api-gateway/dist
+/microserviceUsers/.env.development
 /microserviceUsers/node_modules
 /microserviceUsers/dist
 
