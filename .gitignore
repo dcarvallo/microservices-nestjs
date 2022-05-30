@@ -4,8 +4,14 @@
 /api-gateway/.env.development
 /api-gateway/node_modules
 /api-gateway/dist
+
+/microserviceUsers/.env.development
 /microserviceUsers/node_modules
 /microserviceUsers/dist
+
+/microservicePassenger/.env.development
+/microservicePassenger/node_modules
+/microservicePassenger/dist
 
 # Logs
 logs
