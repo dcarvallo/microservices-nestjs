@@ -4,6 +4,8 @@
 /api-gateway/.env.development
 /api-gateway/node_modules
 /api-gateway/dist
+/microserviceUsers/node_modules
+/microserviceUsers/dist
 
 # Logs
 logs
