@@ -13,6 +13,10 @@
 /microservicePassenger/node_modules
 /microservicePassenger/dist
 
+/microserviceFlight/.env.development
+/microserviceFlight/node_modules
+/microserviceFlight/dist
+
 # Logs
 logs
 *.log
