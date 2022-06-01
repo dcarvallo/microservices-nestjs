@@ -9,18 +9,19 @@ async function bootstrap() {
   app.useGlobalFilters(new AllExceptionFilter());
   app.useGlobalInterceptors(new TimeOutInterceptor());
 
-  const options = new DocumentBuilder().setTitle('FLights API')
+  const options = new DocumentBuilder()
+    .setTitle('FLights API')
     .setDescription('Scheduled FLight App')
     .setVersion('2.0.0')
     .addBearerAuth()
     .build();
-  const document = SwaggerModule.createDocument(app,options);
+  const document = SwaggerModule.createDocument(app, options);
 
-  SwaggerModule.setup('/api/docs',app,document,{
+  SwaggerModule.setup('/api/docs', app, document, {
     swaggerOptions: {
-      filter: true
-    }
-  })
+      filter: true,
+    },
+  });
 
   await app.listen(process.env.PORT || 3000);
 }

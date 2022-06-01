@@ -16,7 +16,7 @@ import { AuthModule } from './auth/auth.module';
     UserModule,
     PassengerModule,
     FlightModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

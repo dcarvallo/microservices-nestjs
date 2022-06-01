@@ -7,11 +7,11 @@ import { LocalAuthGuard } from './guards/local-guard.guard';
 @ApiTags('Authentication')
 @Controller('api/v2/auth')
 export class AuthController {
-  constructor(private readonly authService:AuthService){}
+  constructor(private readonly authService: AuthService) {}
   @UseGuards(LocalAuthGuard)
   @Post('signin')
-  async signIn(@Req() req){
-    console.log(req.user)
+  async signIn(@Req() req) {
+    console.log(req.user);
     return await this.authService.signIn(req.user);
   }
 

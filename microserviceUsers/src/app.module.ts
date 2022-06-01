@@ -6,12 +6,14 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({
-    envFilePath:['.env.development'],
-    isGlobal: true
-  }),
-  MongooseModule.forRoot(process.env.URI_MONGODB)
-  ,UserModule],
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: ['.env.development'],
+      isGlobal: true,
+    }),
+    MongooseModule.forRoot(process.env.URI_MONGODB),
+    UserModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

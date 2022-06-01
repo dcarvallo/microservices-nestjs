@@ -12,21 +12,23 @@ import { ProxyModule } from 'src/common/proxy/proxy.module';
 dotenv.config();
 
 @Module({
-  imports:[ConfigModule.forRoot({
-    envFilePath: ['.env.development'],
-    isGlobal: true,
-  }),
-  UserModule, 
-  PassportModule, 
-  ProxyModule,
-  JwtModule.register({
-    secret: process.env.JWT_SECRET,
-    signOptions: {
-      expiresIn: process.env.EXPIRES_IN,
-      audience: process.env.APP_URL
-    }
-  })],
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: ['.env.development'],
+      isGlobal: true,
+    }),
+    UserModule,
+    PassportModule,
+    ProxyModule,
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
+      signOptions: {
+        expiresIn: process.env.EXPIRES_IN,
+        audience: process.env.APP_URL,
+      },
+    }),
+  ],
   controllers: [AuthController],
-  providers: [AuthService, LocalStrategy, JwtStrategy]
+  providers: [AuthService, LocalStrategy, JwtStrategy],
 })
 export class AuthModule {}

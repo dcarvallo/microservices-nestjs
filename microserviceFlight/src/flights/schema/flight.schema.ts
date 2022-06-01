@@ -1,4 +1,4 @@
-import * as mongoose from 'mongoose';
+import * as mongoose from "mongoose";
 
 export const FlightSchema = new mongoose.Schema(
   {
@@ -6,7 +6,7 @@ export const FlightSchema = new mongoose.Schema(
     airplane: { type: String, required: true },
     destinationCity: { type: String, required: true },
     flightDate: { type: Date, required: true },
-    passengers: [{type: mongoose.Schema.Types.ObjectId, ref:'passengers'}]
+    passengers: [{ type: mongoose.Schema.Types.ObjectId, ref: "passengers" }],
   },
-  { timestamps: true },
+  { timestamps: true }
 );
